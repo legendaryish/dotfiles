@@ -1,18 +1,21 @@
-# .bashrc
+# ish.bashrc
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-. /etc/bashrc
+	. /etc/bashrc
 fi
 
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
-PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
 
-# aliases and functions
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
 #alias plex='ssh rob@192.168.86.28' # internal connection to media server
 alias plex='ssh rob@plex.walayon.com -p 5606' # external connection to medi server
 alias ll='ls -lart' # ll on most rhel systems
